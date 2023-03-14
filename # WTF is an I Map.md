@@ -3,7 +3,7 @@
 ## Bayesian
 
 // Bayesian Network Minimal I Map example
-digraph BayesianNetwork {
+$digraph BayesianNetwork {
   node [shape=circle]
   A;
   B;
@@ -13,7 +13,7 @@ digraph BayesianNetwork {
   B -> AC;
   C -> AC;
   A -> B;
-}
+}$
 
 * A Bayesian Network is a probabilistic graphical model that represents a set of variables and their conditional dependencies using a directed acyclic graph (DAG).
 The Minimal I Map for a Bayesian Network is a graph that preserves the essential dependence relations among the variables, while minimizing the number of edges.
