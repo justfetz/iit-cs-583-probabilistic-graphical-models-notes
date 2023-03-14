@@ -1,1 +1,37 @@
 # iit-pgm
+
+## Probabilistic Graphical Models Notes
+
+This repository contains my notes for a class on Probabilistic Graphical Models. The notes cover the following topics:
+
+- Formulas
+- I Maps
+- Variable Order
+- Probability Distributions
+
+The notes include examples and explanations of each topic. 
+
+### Formulas
+
+The notes cover a variety of formulas related to Probabilistic Graphical Models, including:
+
+- Bayes' Theorem
+- Conditional Probability
+- Joint Probability
+- Posterior Distribution
+
+### I Maps
+
+The notes include examples and explanations of I Maps for both Bayesian Networks and Markov Networks. 
+
+#### Bayesian Network I Map
+
+```mermaid
+graph TD
+A
+B
+C
+AC["AC (filled)"]
+B-->AC
+C-->AC
+A-->B
