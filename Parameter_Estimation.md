@@ -36,13 +36,26 @@ The EM algorithm is an iterative method for estimating the parameters of a Bayes
 ## Calculation of EM algorithm for parameter estimation
 The EM algorithm involves alternating between the E-step, which estimates the expected value of the complete data log-likelihood given the observed data and the current parameter estimates, and the M-step, which updates the parameter estimates based on the expected values computed in the E-step.
 
-\begin{align*}
-\textbf{E-step: } & Q(\theta, \theta^{\text{old}}) = \mathbb{E}{z|X, \theta^{\text{old}}}\left[\log p(X, z|\theta) \right] \
-& = \sum{z}p(z|X, \theta^{\text{old}})\log p(X, z|\theta) \
-\textbf{M-step: } & \theta^{\text{new}} = \arg\max_{\theta}Q(\theta, \theta^{\text{old}})
-\end{align*}
+The EM algorithm is an iterative method for estimating the parameters of a Bayesian Network model in the presence of missing or incomplete data. It involves alternating between the E-step, which estimates the expected value of the complete data log-likelihood given the observed data and the current parameter estimates, and the M-step, which updates the parameter estimates based on the expected values computed in the E-step.
 
-where $X$ denotes the observed data, $z$ denotes the unobserved latent variables, $\theta$ denotes the parameters of the Bayesian Network model, and $\theta^{\text{old}}$ denotes the current estimate of the parameters. The E-step involves computing the expected complete-data log-likelihood $Q(\theta, \theta^{\text{old}})$ given the observed data $X$ and the current estimate of the parameters $\theta^{\text{old}}$. The M-step involves maximizing $Q(\theta, \theta^{\text{old}})$ with respect to the parameters $\theta$ to obtain the new estimate $\theta^{\text{new}}$. The EM algorithm iterates between the E-step and the M-step until convergence.
+The update equation for the M-step is:
+
+$$
+\boldsymbol{\theta}^{(t+1)} = \arg\max_{\boldsymbol{\theta}} Q(\boldsymbol{\theta}, \boldsymbol{\theta}^{(t)}) = \arg\max_{\boldsymbol{\theta}} \sum_{i=1}^n \sum_{j=1}^k w_{ij}^{(t+1)} \log p(x_i, z_i = j | \boldsymbol{\theta})
+$$
+
+where $\boldsymbol{\theta}^{(t)}$ is the current estimate of the parameters at iteration $t$, $\boldsymbol{\theta}^{(t+1)}$ is the updated estimate at iteration $t+1$, $Q(\boldsymbol{\theta}, \boldsymbol{\theta}^{(t)})$ is the expected log-likelihood of the complete data given the observed data and the current estimate of the parameters, $w_{ij}^{(t+1)}$ is the posterior probability of the hidden variable $z_i$ taking value $j$ given the observed data $x_i$ and the current estimate of the parameters, $p(x_i, z_i = j | \boldsymbol{\theta})$ is the joint probability of the observed data and the hidden variable, and $n$ is the number of data points and $k$ is the number of hidden states.
+
+The update equation for the E-step is:
+
+$$
+w_{ij}^{(t+1)} = \frac{p(x_i, z_i = j | \boldsymbol{\theta}^{(t)})}{\sum_{l=1}^k p(x_i, z_i = l | \boldsymbol{\theta}^{(t)})}
+$$
+
+where $w_{ij}^{(t+1)}$ is the posterior probability of the hidden variable $z_i$ taking value $j$ given the observed data $x_i$ and the current estimate of the parameters $\boldsymbol{\theta}^{(t)}$.
+
+The EM algorithm iteratively updates the parameter estimates until convergence, where the change in the parameter estimates between iterations falls below a certain threshold.
+
 
 ## Advantages and disadvantages of EM algorithm
 EM algorithm can handle missing data and is computationally efficient, but it may get stuck in local optima and requires careful initialization of the parameter estimates.
