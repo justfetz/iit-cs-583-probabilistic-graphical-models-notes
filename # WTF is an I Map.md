@@ -3,11 +3,11 @@
 ## Bayesian
 
 // Bayesian Network Minimal I Map example
-$$\require{enclose}
+$\require{enclose}
 \enclose{circle}[mathcolor="blue"]{A} \rightarrow \enclose{square}[mathcolor="green",mathbackground="#FFFFCC"]{AC}
 C \rightarrow AC
 \enclose{circle}[mathcolor="blue"]{B} \rightarrow \enclose{square}[mathcolor="green",mathbackground="#FFFFCC"]{AC}
-A \rightarrow B$$
+A \rightarrow B$
 
 
 * A Bayesian Network is a probabilistic graphical model that represents a set of variables and their conditional dependencies using a directed acyclic graph (DAG).
