@@ -35,3 +35,25 @@ $$
 |---|----------|----------|
 | Row 1 | 1 | 2 |
 | Row 2 | 3 | 4 |
+
+
+### Conditional Probability Distribution:
+$$P(A|B)$$
+
+### Marginal Probability Distribution:
+$$P(A)$$
+
+### Gaussian (Normal) Distribution:
+$$P(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
+
+### Bernoulli Distribution:
+$$P(x) = \begin{cases} 1-p &\text{if } x=0\ p &\text{if } x=1 \end{cases}$$
+
+### Binomial Distribution:
+$$P(x) = {n\choose x}p^x(1-p)^{n-x}$$
+
+### Poisson Distribution:
+$$P(x) = \frac{\lambda^x e^{-\lambda}}{x!}$$
+
+### Exponential Distribution:
+$$P(x) = \lambda e^{-\lambda x}$$
