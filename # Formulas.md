@@ -1,7 +1,7 @@
 # Formulas
 
 ### Bayes Theorm
-P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
+$P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}$
 
 ### Chain Rule of Probability
 P(A_1, A_2, ..., A_n) = P(A_1) \cdot P(A_2 | A_1) \cdot P(A_3 | A_1, A_2) \cdots P(A_n | A_1, A_2, ..., A_{n-1})
