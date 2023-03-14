@@ -35,3 +35,16 @@ AC["AC (filled)"]
 B-->AC
 C-->AC
 A-->B
+
+
+graph TD
+A
+B
+C
+AB["AB (filled)"]
+BC["BC (filled)"]
+A-->AB
+B-->AB
+B-->BC
+C-->BC
+```
