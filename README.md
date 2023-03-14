@@ -36,6 +36,7 @@ B-->AC
 C-->AC
 A-->B
 ```
+#### Markov Network I Map
 ```mermaid
 graph TD
 A
