@@ -35,8 +35,8 @@ AC["AC (filled)"]
 B-->AC
 C-->AC
 A-->B
-
-
+```
+```mermaid
 graph TD
 A
 B
