@@ -24,17 +24,11 @@ In the example, the nodes A, B, and C represent the variables in the Bayesian Ne
 * For a Bayesian network structure, a minimal I-Map is a directed acyclic graph (DAG) that represents the conditional independence relationships among the variables in the network. In a Bayesian network, the variables are represented as nodes in the graph, and the edges between the nodes represent direct dependencies between the variables. The minimal I-Map for a Bayesian network structure is the smallest DAG that contains all the conditional independence statements implied by the structure.
 
 // Markov Network Minimal I Map example
-graph MarkovNetwork {
-  node [shape=circle]
-  A;
-  B;
-  C;
-  node [shape=square,style=filled]
-  AC;
-  B -- AC;
-  C -- AC;
-  A -- B;
-}
+```mermaid
+graph LR
+A((A))-->B((B))
+C((C))-->B((B))
+```
 
 
 * For a Markov network structure, a minimal I-Map is an undirected graph that represents the conditional independence relationships among the variables in the network. In a Markov network, the variables are represented as nodes in the graph, and the edges between the nodes represent direct dependencies between the variables. The minimal I-Map for a Markov network structure is the smallest undirected graph that contains all the conditional independence statements implied by the structure.
