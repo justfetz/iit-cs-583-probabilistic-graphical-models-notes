@@ -4,22 +4,22 @@
 $P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}$
 
 ### Chain Rule of Probability
-P(A_1, A_2, ..., A_n) = P(A_1) \cdot P(A_2 | A_1) \cdot P(A_3 | A_1, A_2) \cdots P(A_n | A_1, A_2, ..., A_{n-1})
+$P(A_1, A_2, ..., A_n) = P(A_1) \cdot P(A_2 | A_1) \cdot P(A_3 | A_1, A_2) \cdots P(A_n | A_1, A_2, ..., A_{n-1})$
 
 ### Law of Total Probability
-P(B) = \sum_i P(B | A_i) \cdot P(A_i)
+$P(B) = \sum_i P(B | A_i) \cdot P(A_i)$
 
 ### Conditional Probability
-P(A | B) = \frac{P(A \cap B)}{P(B)}
+$P(A | B) = \frac{P(A \cap B)}{P(B)}$
 
 ### Expected Value
-E(X) = \sum_i x_i \cdot P(X = x_i)
+$E(X) = \sum_i x_i \cdot P(X = x_i)$
 
 ### Variance
-Var(X) = E((X - \mu)^2) = \sum_i (x_i - \mu)^2 \cdot P(X = x_i)
+$Var(X) = E((X - \mu)^2) = \sum_i (x_i - \mu)^2 \cdot P(X = x_i)$
 
 ### Standard Deviation
-\sigma_X = \sqrt{Var(X)}
+$\sigma_X = \sqrt{Var(X)}$
 
 ### How to make a matrix
 $$
