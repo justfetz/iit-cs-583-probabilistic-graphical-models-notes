@@ -22,6 +22,11 @@ MLE is computationally efficient and easy to implement, but it can be biased and
 ## Definition of Bayesian parameter estimation
 Bayesian parameter estimation is a method for estimating the parameters of a Bayesian Network by computing the posterior probability distribution of the parameters given the observed data and prior information.
 
+$$
+P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}
+$$
+
+
 ## Calculation of Bayesian parameter estimation using Bayesian inference
 Bayesian parameter estimation involves calculating the posterior distribution of the parameters using Bayes' theorem, which involves incorporating prior information and likelihood of observed data.
 
