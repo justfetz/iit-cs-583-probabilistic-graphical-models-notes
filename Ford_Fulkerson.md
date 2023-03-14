@@ -1,14 +1,19 @@
 
 ```mermaid
-graph TD;
-    s((s)) --> A((A)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  t((t));
-    A((A)) -- 8 --> B((B));
-    A((A)) -- 5 --> C((C));
-    B((B)) -- 4 --> t((t));
-    C((C)) -- 10 --> t((t));
-    B((B)) -- 3 --> C((C));
-    A((A)) -- 9 --> t((t));
-    s((s)) -- 4 --> A((A));
+graph TD
+s((s)) --> A((A))		// Capacity 16
+s --> B((B))		// Capacity 13
+A --> C((C))		// Capacity 12
+A --> D((D))		// Capacity 4
+B --> D
+B --> E((E))		// Capacity 14
+C --> t((t))		// Capacity 20
+D --> t
+D --> F((F))		// Capacity 7
+E --> t
+E --> F
+F --> t
+```
     
     subgraph First Iteration
     A -- 4 --> B;
