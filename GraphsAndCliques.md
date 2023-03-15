@@ -10,7 +10,6 @@ A graph is a collection of vertices (or nodes) and edges, where edges represent 
 graph LR
 A --> B
 B --> C
-C --> D
 B --> D
 ```
 
