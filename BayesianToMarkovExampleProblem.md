@@ -9,7 +9,6 @@ P(A):
 |  a2 |  0.4 |
 
 P(B|A):
-
 |  A  |  B  | P(B|A) |
 |-----|-----|--------|
 |  a1 |  b1 |   0.7  |
@@ -18,7 +17,6 @@ P(B|A):
 |  a2 |  b2 |   0.6  |
 
 P(C|A,B):
-
 |  A  |  B  |  C  | P(C|A,B) |
 |-----|-----|-----|----------|
 |  a1 |  b1 |  c1 |    0.8   |
@@ -43,17 +41,16 @@ Now, let's convert this Bayesian network to a Markov network.
 
 **Removal of directed edges:** Remove the direction from all remaining directed edges in the original BN. Now you have an undirected graph representing the relationships between the variables.
 
+```mermaid
 graph
-A -- B
-A -- C
-B -- C
-
+  A -- B
+  A -- C
+  B -- C
+```
 Sure! Here's an example of converting a Bayesian network to a Markov network, using Markdown, tables for CPDs, and Mermaid for graph visualization.
 
 Consider a simple Bayesian network with three nodes: A, B, and C. Node A has no parents, node B has A as its parent, and node C has A and B as its parents. Let's assume the following CPDs:
 
-less
-Copy code
 P(A):
 |  A  | P(A) |
 |-----|------|
@@ -96,13 +93,13 @@ Removal of directed edges: Remove the direction from all remaining directed edge
 
 The Markov network can be visualized using Mermaid as follows:
 
-mermaid
-Copy code
-graph
-A -- B
-A -- C
-B -- C
 
+```mermaid
+graph
+  A -- B
+  A -- C
+  B -- C
+```
 **Potential functions:** Represent the conditional probability distributions (CPDs) from the Bayesian network as potential functions in the Markov network. For each CPD in the Bayesian network, create a potential function over the corresponding clique in the Markov network, which consists of the variable and its parents in the original BN. In this case, we have three potential functions:
 
 ψ(A)
