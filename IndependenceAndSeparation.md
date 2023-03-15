@@ -14,9 +14,9 @@ There are three possible configurations for d-separation:
 
 ```mermaid
 graph LR
-A1[A] --> B1[B] --> C1[C]
-A2[A] <-- B2[B] --> C2[C]
-A3[A] --> B3[B] <-- C3[C]
+  A1[A] --> B1[B] --> C1[C]
+  A2[A] <-- B2[B] --> C2[C]
+  A3[A] --> B3[B] <-- C3[C]
 ```
 
 For causal and evidential structures, X and Y are d-separated by Z if Z includes the middle node. For the common cause structure, X and Y are d-separated by Z if Z does not include the middle node or any of its descendants.
@@ -26,8 +26,8 @@ In Markov networks, separation is determined using the concept of an undirected 
 
 ```mermaid
 graph LR
-A1[A] --- B1[B] --- C1[C] --- D1[D]
-A2[A] --- B2[B] --- C2[C] --- D2[D]
-B2 --- E2[E] --- F2[F] --- C2
+  A1[A] --- B1[B] --- C1[C] --- D1[D]
+  A2[A] --- B2[B] --- C2[C] --- D2[D]
+  B2 --- E2[E] --- F2[F] --- C2
 ```
 In the first Markov network, A and D are separated by {B, C}, while in the second Markov network, A and D are not separated by {B, C}, because there is an alternate path A → B → E → F → C → D that doesn't go through B or C.
