@@ -37,9 +37,9 @@ Now, let's convert this Bayesian network to a Markov network.
 
 ```mermaid
 graph TD
-  A -- B
-  A -- C
-  B -- C
+  A --- B
+  A --- C
+  B --- C
 ```
 
 
@@ -89,9 +89,9 @@ The Markov network can be visualized using Mermaid as follows:
 
 ```mermaid
 graph TD
-  A -- B
-  A -- C
-  B -- C
+  A --- B
+  A --- C
+  B --- C
 ```
 **Potential functions:** Represent the conditional probability distributions (CPDs) from the Bayesian network as potential functions in the Markov network. For each CPD in the Bayesian network, create a potential function over the corresponding clique in the Markov network, which consists of the variable and its parents in the original BN. In this case, we have three potential functions:
 
