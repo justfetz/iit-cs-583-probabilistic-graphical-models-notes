@@ -8,10 +8,10 @@ A graph is a collection of vertices (or nodes) and edges, where edges represent 
 
 ```mermaid
 graph LR
-A[A] --- B[B]
-B --- C[C]
-C --- D[D]
-A --- D
+A <-> B
+B --> C
+C --> D
+A --> D
 ```
 
 **Undirected Graphs**
