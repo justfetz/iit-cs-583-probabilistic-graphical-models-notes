@@ -51,7 +51,17 @@ graph TD
   A --- C
   B --- C
 ```
-**Potential functions:** Represent the conditional probability distributions (CPDs) from the Bayesian network as potential functions in the Markov network. For each CPD in the Bayesian network, create a potential function over the corresponding clique in the Markov network, which consists of the variable and its parents in the original BN. In this case, we have three potential functions:
+**Potential functions:** Represent the conditional probability distributions (CPDs) from the Bayesian network as potential functions in the Markov network. For each CPD in the Bayesian network, create a potential function over the corresponding clique in the Markov network, which consists of the variable and its parents in the original BN. 
+
+*Potential functions are non-negative functions defined over the cliques in a Markov network that represent the local dependencies between variables. They do not have to sum up to 1, unlike probabilities in a Bayesian network.
+
+To **derive potential functions** from CPDs in a Bayesian network, you can follow these steps:
+
+*For each CPD, create a potential function over the corresponding clique in the Markov network. The clique consists of the variable and its parents in the Bayesian network.
+
+*For each assignment of variables in the clique, set the potential function's value equal to the product of the corresponding probabilities in the CPD and the prior probabilities of the parents.
+
+In this case, we have three potential functions:
 
 ψ(A)
 ψ(A, B)
