@@ -8,13 +8,7 @@ P(A):
 |  a1 |  0.6 |
 |  a2 |  0.4 |
 
-P(B|A):
-|  A  |  B  | P(B|A) |
-|-----|-----|--------|
-|  a1 |  b1 |   0.7  |
-|  a1 |  b2 |   0.3  |
-|  a2 |  b1 |   0.4  |
-|  a2 |  b2 |   0.6  |
+
 
 P(C|A,B):
 |  A  |  B  |  C  | P(C|A,B) |
@@ -42,7 +36,7 @@ Now, let's convert this Bayesian network to a Markov network.
 **Removal of directed edges:** Remove the direction from all remaining directed edges in the original BN. Now you have an undirected graph representing the relationships between the variables.
 
 ```mermaid
-graph
+graph LR
   A -- B
   A -- C
   B -- C
@@ -79,11 +73,10 @@ P(C|A,B):
 The Bayesian network can be visualized using Mermaid as follows:
 
 ```mermaid
-Copy code
 graph TD
-A --> B
-A --> C
-B --> C
+  A --> B
+  A --> C
+  B --> C
 ```
 Now, let's convert this Bayesian network to a Markov network.
 
@@ -95,7 +88,7 @@ The Markov network can be visualized using Mermaid as follows:
 
 
 ```mermaid
-graph
+graph LR
   A -- B
   A -- C
   B -- C
