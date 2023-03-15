@@ -30,10 +30,12 @@ P(C|A,B):
 |  a2 |  b2 |  c1 |    0.9   |
 |  a2 |  b2 |  c2 |    0.1   |
 
+```mermaid
 graph TD
-A --> B
-A --> C
-B --> C
+  A --> B
+  A --> C
+  B --> C
+```
 
 Now, let's convert this Bayesian network to a Markov network.
 
