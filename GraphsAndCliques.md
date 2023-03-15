@@ -11,7 +11,7 @@ graph LR
 A --> B
 B --> C
 C --> D
-A --> D
+B --> D
 ```
 
 **Undirected Graphs**
