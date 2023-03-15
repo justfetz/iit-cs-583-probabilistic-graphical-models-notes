@@ -12,6 +12,7 @@ There are three possible configurations for d-separation:
 2. Evidential (fork) structure: A ← B → C
 3. Common cause (collider) structure: A → B ← C
 
+
 ```mermaid
 graph TD
 A1[A] --> B1[B] --> C1[C]
