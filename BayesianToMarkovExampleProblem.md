@@ -8,49 +8,6 @@ P(A):
 |  a1 |  0.6 |
 |  a2 |  0.4 |
 
-
-
-P(C|A,B):
-|  A  |  B  |  C  | P(C|A,B) |
-|-----|-----|-----|----------|
-|  a1 |  b1 |  c1 |    0.8   |
-|  a1 |  b1 |  c2 |    0.2   |
-|  a1 |  b2 |  c1 |    0.4   |
-|  a1 |  b2 |  c2 |    0.6   |
-|  a2 |  b1 |  c1 |    0.3   |
-|  a2 |  b1 |  c2 |    0.7   |
-|  a2 |  b2 |  c1 |    0.9   |
-|  a2 |  b2 |  c2 |    0.1   |
-
-```mermaid
-graph TD
-  A --> B
-  A --> C
-  B --> C
-```
-
-Now, let's convert this Bayesian network to a Markov network.
-
-**Moralization:** Connect all pairs of nodes that have a common child, creating an undirected edge between them if it doesn't already exist. In this case, nodes A and B are both parents of C, so we add an undirected edge between A and B.
-
-**Removal of directed edges:** Remove the direction from all remaining directed edges in the original BN. Now you have an undirected graph representing the relationships between the variables.
-
-```mermaid
-graph TD
-  A --- B
-  A --- C
-  B --- C
-```
-
-
-Consider a simple Bayesian network with three nodes: A, B, and C. Node A has no parents, node B has A as its parent, and node C has A and B as its parents. Let's assume the following CPDs:
-
-P(A):
-|  A  | P(A) |
-|-----|------|
-|  a1 |  0.6 |
-|  a2 |  0.4 |
-
 P(B|A):
 |  A  |  B  | P(B|A) |
 |-----|-----|-------|
@@ -70,6 +27,7 @@ P(C|A,B):
 |  a2 |  b1 |  c2 |    0.7   |
 |  a2 |  b2 |  c1 |    0.9   |
 |  a2 |  b2 |  c2 |    0.1   |
+
 The Bayesian network can be visualized using Mermaid as follows:
 
 ```mermaid
@@ -80,9 +38,9 @@ graph TD
 ```
 Now, let's convert this Bayesian network to a Markov network.
 
-Moralization: Connect all pairs of nodes that have a common child, creating an undirected edge between them if it doesn't already exist. In this case, nodes A and B are both parents of C, so we add an undirected edge between A and B.
+**Moralization:** Connect all pairs of nodes that have a common child, creating an undirected edge between them if it doesn't already exist. In this case, nodes A and B are both parents of C, so we add an undirected edge between A and B.
 
-Removal of directed edges: Remove the direction from all remaining directed edges in the original BN. Now you have an undirected graph representing the relationships between the variables.
+**Removal of directed edges:** Remove the direction from all remaining directed edges in the original BN. Now you have an undirected graph representing the relationships between the variables.
 
 The Markov network can be visualized using Mermaid as follows:
 
