@@ -11,13 +11,13 @@ P(A):
 P(B|A):
 |  A  |  B  | P(A, B) |
 |-----|-----|--------|
-|  a1 |  b1 |   0.42  |
-|  a1 |  b2 |   0.18  |
-|  a2 |  b1 |   0.24  |
-|  a2 |  b2 |   0.36  |
+|  a1 |  b1 |   0.7  |
+|  a1 |  b2 |   0.3  |
+|  a2 |  b1 |   0.4  |
+|  a2 |  b2 |   0.6  |
 
 P(C| A, B):
-|  A  |  B  |  C  | ψ(C, A, B) |
+|  A  |  B  |  C  | P(C, A, B) |
 |-----|-----|-----|-----------|
 |  a1 |  b1 |  c1 |    0.8     |
 |  a1 |  b1 |  c2 |    0.2     |
@@ -73,24 +73,23 @@ The potential functions are defined as:
 ψ(B, A):
 |  A  |  B  | ψ(B, A) |
 |-----|-----|--------|
-|  a1 |  b1 |   0.7  |
-|  a1 |  b2 |   0.3  |
-|  a2 |  b1 |   0.4  |
-|  a2 |  b2 |   0.6  |
+|  a1 |  b1 |   0.42  |
+|  a1 |  b2 |   0.18  |
+|  a2 |  b1 |   0.28  |
+|  a2 |  b2 |   0.24  |
 
 ψ(C, A, B):
 |  A  |  B  |  C  | ψ(C, A, B) |
 |-----|-----|-----|-----------|
-|  a1 |  b1 |  c1 |    0.8     |
-|  a1 |  b1 |  c2 |    0.2     |
-|  a1 |  b2 |  c1 |    0.4     |
-|  a1 |  b2 |  c2 |    0.6     |
-|  a2 |  b1 |  c1 |    0.3     |
-|  a2 |  b1 |  c2 |    0.7     |
-|  a2 |  b2 |  c1 |    0.9     |
-|  a2 |  b2 |  c2 |    0.1     |
+|  a1 |  b1 |  c1 |    0.336   |
+|  a1 |  b1 |  c2 |    0.084   |
+|  a1 |  b2 |  c1 |    0.072   |
+|  a1 |  b2 |  c2 |    0.108   |
+|  a2 |  b1 |  c1 |    0.048   |
+|  a2 |  b1 |  c2 |    0.112   |
+|  a2 |  b2 |  c1 |    0.216   |
+|  a2 |  b2 |  c2 |    0.024   |
 
-To clarify, in this example, the potential functions are derived directly from the conditional probability distributions (CPDs) of the Bayesian network. Specifically, for each CPD, we create a potential function over the corresponding clique (a fully connected subgraph) in the Markov network, and the values of the potential function are equal to the probabilities given in the CPD.
 
 **Normalize:** Note that unlike Bayesian networks, the potential functions in a Markov network don't directly represent probabilities. Instead, the joint probability distribution over all variables can be derived from the product of all potential functions, normalized by a partition function (Z). The partition function is the sum of the product of potential functions over all possible variable assignments.
 In this case, we can derive the joint probability distribution by multiplying the potential functions and dividing by the partition function Z:
@@ -109,4 +108,4 @@ Since the partition function Z equals 1, the joint probability distribution over
 
 $P(A, B, C) = \psi(A) \times \psi(A, B) \times \psi(A, B, C)$
 
-This completes the conversion of the Bayesian network to a Markov network.
+This *completes* the conversion of the Bayesian network to a Markov network.
