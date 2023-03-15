@@ -36,12 +36,12 @@ Now, let's convert this Bayesian network to a Markov network.
 **Removal of directed edges:** Remove the direction from all remaining directed edges in the original BN. Now you have an undirected graph representing the relationships between the variables.
 
 ```mermaid
-graph LR
+graph TD
   A -- B
   A -- C
   B -- C
 ```
-Sure! Here's an example of converting a Bayesian network to a Markov network, using Markdown, tables for CPDs, and Mermaid for graph visualization.
+
 
 Consider a simple Bayesian network with three nodes: A, B, and C. Node A has no parents, node B has A as its parent, and node C has A and B as its parents. Let's assume the following CPDs:
 
@@ -88,7 +88,7 @@ The Markov network can be visualized using Mermaid as follows:
 
 
 ```mermaid
-graph LR
+graph TD
   A -- B
   A -- C
   B -- C
