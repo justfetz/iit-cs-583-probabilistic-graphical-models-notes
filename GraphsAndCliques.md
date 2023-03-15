@@ -8,7 +8,7 @@ A graph is a collection of vertices (or nodes) and edges, where edges represent 
 
 ```mermaid
 graph LR
-A <-> B
+A --> B
 B --> C
 C --> D
 A --> D
