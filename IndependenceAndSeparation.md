@@ -13,9 +13,9 @@ There are three possible configurations for d-separation:
 3. Common cause (collider) structure: A → B ← C
 
 ```mermaid
-graph TB
+graph LR
   A1[A] --> B1[B] --> C1[C]
-  A2[A] -->|A2| B2[B] --> C2[C]
+  A2[A] <-- B2[B] --> C2[C]
   A3[A] --> B3[B] <-- C3[C]
 ```
 
