@@ -27,14 +27,6 @@ The Bayesian Network would look like this:
     A --> B
     B --> C
 ```
-OR 
-
-A
-↓
-B
-↓
-C
-
 
 Now, we need to determine the CPDs for each variable based on the given pairwise potentials. Since we chose A as the first variable in the ordering, its CPD is simply its marginal distribution:
 
@@ -54,12 +46,6 @@ To summarize, we have converted the Markov Network into a Bayesian Network with 
     A --> B
     B --> C
    ```
-
-A
-↓
-B
-↓
-C
 
 - P(A) = α * Σ(Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), B), C)
 - P(B | A) = β * Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), C)
