@@ -4,16 +4,12 @@ Let's consider a simple Markov Network (Undirected Graphical Model) with three v
 
 Our Markov Network looks like this:
 
-A -- B
-|    |
-C -- B
 
 ```mermaid
 graph LR
     A --- B
     A --- C
     B --- C
-    C --- B
 ```
 
 Here, the pairwise potentials are:
@@ -21,6 +17,7 @@ Here, the pairwise potentials are:
 ψ(A, B)
 ψ(B, C)
 ψ(A, C)
+
 To convert this Markov Network into a Bayesian Network (Directed Graphical Model) with Conditional Probability Distributions (CPDs), we need to select an ordering for the variables and choose a direction for the edges. Let's choose the ordering A, B, C.
 
 The Bayesian Network would look like this:
@@ -34,11 +31,13 @@ C
 
 Now, we need to determine the CPDs for each variable based on the given pairwise potentials. Since we chose A as the first variable in the ordering, its CPD is simply its marginal distribution:
 
-P(A) = α * Σ(Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), B), C)
+## P(A) = α * Σ(Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), B), C)
+
 For the CPDs of B and C, we use the following formula:
 
 P(B | A) = β * Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), C)
 P(C | B, A) = γ * ψ(A, B) * ψ(B, C) * ψ(A, C)
+
 In the above CPDs, α, β, and γ are normalization constants to ensure the probabilities sum up to 1.
 
 To summarize, we have converted the Markov Network into a Bayesian Network with the following structure and CPDs:
@@ -52,6 +51,7 @@ C
 P(A) = α * Σ(Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), B), C)
 P(B | A) = β * Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), C)
 P(C | B, A) = γ * ψ(A, B) * ψ(B, C) * ψ(A, C)
+
 Keep in mind that this is just one possible ordering and resulting Bayesian Network. The specific ordering and structure you choose may depend on the problem domain and your specific requirements.
 
 ## Summary
@@ -86,6 +86,7 @@ Let's compute the values for each possible state of A:
 
 P(A=0) = α * (ψ(0, 0) * ψ(0, 0) * ψ(0, 0) + ψ(0, 0) * ψ(0, 1) * ψ(0, 1) + ψ(0, 1) * ψ(1, 0) * ψ(0, 0) + ψ(0, 1) * ψ(1, 1) * ψ(0, 1)) = α * (0.8 * 0.9 * 0.7 + 0.8 * 0.1 * 0.3 + 0.2 * 0.4 * 0.7 + 0.2 * 0.6 * 0.3) = α * 0.754
 P(A=1) = α * (ψ(1, 0) * ψ(0, 0) * ψ(1, 0) + ψ(1, 0) * ψ(0, 1) * ψ(1, 1) + ψ(1, 1) * ψ(1, 0) * ψ(1, 0) + ψ(1, 1) * ψ(1, 1) * ψ(1, 1)) = α * (0.3 * 0.9 * 0.6 + 0.3 * 0.1 * 0.4 + 0.7 * 0.4 * 0.6 + 0.7 * 0.6 * 0.4) = α * 0.746
+
 To ensure the probabilities sum up to 1, we need to find the normalization constant α:
 
 α = 1 / (0.754 + 0.746) ≈ 0.668
@@ -95,16 +96,19 @@ So, P(A) becomes:
 P(A=0) ≈ 0.668 * 0.754 ≈ 0.504
 P(A=1) ≈ 0.668 * 0.746 ≈ 0.496
 P(B | A) = β * Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), C)
+
 We compute the values for each possible state of B given A:
 
 P(B=0 | A=0) = β * (ψ(0, 0) * ψ(0, 0) * ψ(0, 0) + ψ(0, 0) * ψ(0, 1) * ψ(0, 1)) = β * (0.8 * 0.9 * 0.7 + 0.8 * 0.1 * 0.3) ≈ β * 0.565
 P(B=1 | A=0) = β * (ψ(0, 1) * ψ(1, 0) * ψ(0, 0) + ψ(0, 1) * ψ(1, 1) * ψ(0, 1)) = β * (0.2 * 0.4 * 0.7 + 0.2 * 0.6 * 0.3) ≈ β * 0.146
 P(B=0 | A=1) = β * (ψ(1, 0) * ψ(0, 0) * ψ(1, 0) + ψ(1, 0) * ψ(0, 1) * ψ(1, 1)) = β * (0.3 * 0.9 * 0.6 + 0.3 * 0.1 * 0.4) ≈ β * 0.189
 P(B=1 | A=1) = β * (ψ(1, 1) * ψ(1, 0) * ψ(1, 0) + ψ(1, 1) * ψ(1, 1) * ψ(1, 1)) = β * (0.7 * 0.4 * 0.6 + 0.7 * 0.6 * 0.4) ≈ β * 0.647
+
 Since we need to normalize the probabilities for B given each state of A:
 
 β (when A=0) = 1 / (0.565 + 0.146) ≈ 1.503
 β (when A=1) = 1 / (0.189 + 0.647) ≈ 1.191
+
 So, P(B | A) becomes:
 
 P(B=0 | A=0) ≈ 1.503 * 0.565 ≈ 0.850
@@ -115,6 +119,7 @@ P(B=1 | A=1) ≈ 1.191 * 0.647 ≈ 0.775
 Since we already have the pairwise potentials, we can compute P(C | B, A) directly using the formula:
 
 P(C | B, A) = γ * ψ(A, B) * ψ(B, C) * ψ(A, C)
+
 We compute the values for each possible state of C given B and A:
 
 P(C=0 | B=0, A=0) = γ * ψ(0, 0) * ψ(0, 0) * ψ(0, 0) = γ * 0.8 * 0.9 * 0.7 ≈ γ * 0.504
