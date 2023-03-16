@@ -12,6 +12,26 @@ There are three possible configurations for d-separation:
 2. Evidential (fork) structure: A ← B → C
 3. Common cause (collider) structure: A → B ← C
 
+D-separation is a criterion used in Bayesian networks to determine whether two sets of nodes (variables) are conditionally independent given a third set of nodes (observed variables). To perform d-separation, you need to analyze the paths between nodes in the directed acyclic graph (DAG) representing the Bayesian network.
+
+Here's a step-by-step guide to perform d-separation:
+
+1. Identify the sets of nodes: Determine the two sets of nodes (X and Y) whose conditional independence you want to test, and the set of observed nodes (Z).
+
+2. Find all paths between the nodes in X and Y: A path is an unbroken sequence of connected nodes in the graph. Identify all paths that connect any node in X to any node in Y.
+
+3. Check for blocked paths: A path is considered blocked with respect to the observed nodes Z if it meets either of these conditions:
+
+a. The path contains a chain (A → B → C) or a fork (A ← B → C), and the middle node B is observed (i.e., B is in Z).
+
+b. The path contains a collider (A → B ← C), and neither the middle node B nor any of its descendants are observed (i.e., neither B nor its descendants are in Z).
+
+**Determine d-separation:** 
+
+If all paths between the nodes in X and Y are blocked with respect to Z, then X and Y are d-separated by Z, which implies that X and Y are conditionally independent given Z. If there is at least one unblocked path, then X and Y are not d-separated by Z, meaning that they are not conditionally independent given Z.
+
+By following these steps and analyzing the paths in the DAG, you can determine whether two sets of nodes are conditionally independent given a set of observed nodes using the d-separation criterion.
+
 ## Directions in Graph Nodes
 A1[A] --> B1[B] --> C1[C] 
 
