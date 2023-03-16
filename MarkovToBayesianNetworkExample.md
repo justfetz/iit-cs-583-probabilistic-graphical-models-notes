@@ -31,12 +31,12 @@ C
 
 Now, we need to determine the CPDs for each variable based on the given pairwise potentials. Since we chose A as the first variable in the ordering, its CPD is simply its marginal distribution:
 
-## P(A) = α * Σ(Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), B), C)
+### P(A) = α * Σ(Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), B), C)
 
 For the CPDs of B and C, we use the following formula:
 
-P(B | A) = β * Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), C)
-P(C | B, A) = γ * ψ(A, B) * ψ(B, C) * ψ(A, C)
+-P(B | A) = β * Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), C)
+-P(C | B, A) = γ * ψ(A, B) * ψ(B, C) * ψ(A, C)
 
 In the above CPDs, α, β, and γ are normalization constants to ensure the probabilities sum up to 1.
 
