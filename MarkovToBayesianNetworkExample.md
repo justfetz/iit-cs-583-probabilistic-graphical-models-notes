@@ -10,10 +10,10 @@ C -- B
 
 ```mermaid
 graph LR
-    A --> B
-    A --> C
-    B --> C
-    C --> B
+    A --- B
+    A --- C
+    B --- C
+    C --- B
 ```
 
 Here, the pairwise potentials are:
