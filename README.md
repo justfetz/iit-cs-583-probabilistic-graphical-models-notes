@@ -6,8 +6,11 @@ This repository contains my notes for a class on Probabilistic Graphical Models.
 
 - Formulas
 - I Maps
-- Variable Order
+- P MAP (Perfect Map)
+- Variable Ordering
 - Probability Distributions
+- Bayesian to Markov
+- Markov to Bayesian
 
 The notes include examples and explanations of each topic. 
 
