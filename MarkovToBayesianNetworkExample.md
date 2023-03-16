@@ -163,7 +163,6 @@ graph LR
     A --- B
     A --- C
     B --- C
-    B --- B
 ```
 
 ```mermaid
