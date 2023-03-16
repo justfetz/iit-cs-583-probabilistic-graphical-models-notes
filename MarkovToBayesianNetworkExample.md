@@ -14,13 +14,20 @@ graph LR
 
 Here, the pairwise potentials are:
 
-ψ(A, B)
-ψ(B, C)
-ψ(A, C)
+- ψ(A, B)
+- ψ(B, C)
+- ψ(A, C)
 
 To convert this Markov Network into a Bayesian Network (Directed Graphical Model) with Conditional Probability Distributions (CPDs), we need to select an ordering for the variables and choose a direction for the edges. Let's choose the ordering A, B, C.
 
 The Bayesian Network would look like this:
+
+```mermaid
+    graph TD
+    A --> B
+    B --> C
+```
+OR 
 
 A
 ↓
@@ -31,16 +38,22 @@ C
 
 Now, we need to determine the CPDs for each variable based on the given pairwise potentials. Since we chose A as the first variable in the ordering, its CPD is simply its marginal distribution:
 
-### P(A) = α * Σ(Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), B), C)
+#### P(A) = α * Σ(Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), B), C)
 
 For the CPDs of B and C, we use the following formula:
 
--P(B | A) = β * Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), C)
--P(C | B, A) = γ * ψ(A, B) * ψ(B, C) * ψ(A, C)
+- P(B | A) = β * Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), C)
+- P(C | B, A) = γ * ψ(A, B) * ψ(B, C) * ψ(A, C)
 
 In the above CPDs, α, β, and γ are normalization constants to ensure the probabilities sum up to 1.
 
 To summarize, we have converted the Markov Network into a Bayesian Network with the following structure and CPDs:
+
+```mermaid
+   graph TD
+    A --> B
+    B --> C
+   ```
 
 A
 ↓
@@ -48,9 +61,9 @@ B
 ↓
 C
 
-P(A) = α * Σ(Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), B), C)
-P(B | A) = β * Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), C)
-P(C | B, A) = γ * ψ(A, B) * ψ(B, C) * ψ(A, C)
+- P(A) = α * Σ(Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), B), C)
+- P(B | A) = β * Σ(ψ(A, B) * ψ(B, C) * ψ(A, C), C)
+- P(C | B, A) = γ * ψ(A, B) * ψ(B, C) * ψ(A, C)
 
 Keep in mind that this is just one possible ordering and resulting Bayesian Network. The specific ordering and structure you choose may depend on the problem domain and your specific requirements.
 
