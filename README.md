@@ -1,5 +1,3 @@
-# iit-pgm repository
-
 ## Probabilistic Graphical Models Notes
 
 This repository contains my notes for a class on Probabilistic Graphical Models. The notes cover the following topics:
@@ -52,3 +50,5 @@ B-->AB
 B-->BC
 C-->BC
 ```
+## iit-pgm repository
+
