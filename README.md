@@ -1,4 +1,4 @@
-# iit-pgm
+# iit-pgm repository
 
 ## Probabilistic Graphical Models Notes
 
