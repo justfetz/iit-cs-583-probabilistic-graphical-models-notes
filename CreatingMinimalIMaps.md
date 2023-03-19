@@ -7,7 +7,7 @@ Create minimal I-Maps for P, using the following variable orders.
 Graph = [Nodes={A, B, C,D,E,G}, Edges={(A,B),(B,D),(B,E),(C,E),(E,G)}]  
 
 ```mermaid
-   Graph TD
+ graph TD
    A --> B
    B --> D
    B --> E
@@ -29,7 +29,7 @@ To build a minimal I-Map for P using this variable order, we will iteratively ad
 - Reason: C is not adjacent to E in the graph, but C and E are dependent given A and B.
 -Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(A, B), (B, D), (B, E), (C, E)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> B
    B --> D
    B --> E
@@ -39,7 +39,7 @@ To build a minimal I-Map for P using this variable order, we will iteratively ad
 - Reason: B is adjacent to A in the graph, but A and B are dependent given C.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(A, B), (B, D), (B, E), (C, E), (B, A)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> B
    B --> D
    B --> E
@@ -50,7 +50,7 @@ To build a minimal I-Map for P using this variable order, we will iteratively ad
 - Reason: E is adjacent to D in the graph, but E and D are dependent given B.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(A, B), (B, D), (B, E), (C, E), (B, A), (E, D)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> B
    B --> D
    B --> E
@@ -62,7 +62,7 @@ To build a minimal I-Map for P using this variable order, we will iteratively ad
 - Reason: E is adjacent to G in the graph, but E and G are dependent given C and A.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(A, B), (B, D), (B, E), (C, E), (B, A), (E, D), (E, G)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> B
    B --> D
    B --> E
@@ -81,7 +81,7 @@ To build a minimal I-Map for P using this variable order, we will follow the sam
 - Reason: B is adjacent to D in the graph, but B and D are dependent given A.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(B, D)}]
 ```mermaid
-   Graph TD
+graph TD
    B --> D
   
 ```
@@ -89,7 +89,7 @@ To build a minimal I-Map for P using this variable order, we will follow the sam
 - Reason: A is not adjacent to B in the graph, but A and B are dependent given D.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(B, D), (A, B)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> B
    B --> D
 ```
@@ -97,7 +97,7 @@ To build a minimal I-Map for P using this variable order, we will follow the sam
 - Reason: B is adjacent to E in the graph, but B and E are dependent given A and C.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(B, D), (A, B), (B, E)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> B
    B --> D
    B --> E
@@ -106,7 +106,7 @@ To build a minimal I-Map for P using this variable order, we will follow the sam
 - Reason: E is adjacent to C in the graph, but E and C are dependent given A and B.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(B, D), (A, B), (B, E), (E, C)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> B
    B --> D
    B --> E
@@ -116,7 +116,7 @@ To build a minimal I-Map for P using this variable order, we will follow the sam
 - Reason: E is adjacent to G in the graph, but E and G are dependent given A, B, and C.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(B, D), (A, B), (B, E), (E, C), (E, G)]}
 ```mermaid
-   Graph TD
+graph TD
    A --> B
    B --> D
    B --> E
@@ -131,14 +131,14 @@ This is a minimal I-Map for P using the given variable order.
 - Reason: E is adjacent to D in the graph, but E and D are dependent given B.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(E, D)}]
 ```mermaid
-   Graph TD
+graph TD
    E --> D
 ```
 - Step 2: Add edge (C, E)
 - Reason: C is not adjacent to E in the graph, but C and E are dependent given A and B.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(E, D), (C, E)}]
 ```mermaid
-   Graph TD
+graph TD
    C --> E
    E --> D
 ```
@@ -146,7 +146,7 @@ This is a minimal I-Map for P using the given variable order.
 - Reason: B is adjacent to E in the graph, but B and E are dependent given A and C.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(E, D), (C, E), (B, E)}]
 ```mermaid
-   Graph TD
+graph TD
    B --> E
    C --> E
    E --> D
@@ -155,7 +155,7 @@ This is a minimal I-Map for P using the given variable order.
 - Reason: D is not adjacent to C in the graph, but D and C are dependent given B and E.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(E, D), (C, E), (B, E), (D, C)}]
 ```mermaid
-   Graph TD
+graph TD
    E --> D
    B --> E
    C --> E
@@ -165,7 +165,7 @@ This is a minimal I-Map for P using the given variable order.
 - Reason: B is adjacent to A in the graph, but A and B are dependent given D and C.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(E, D), (C, E), (B, E), (D, C), (B, A)}]
 ```mermaid
-   Graph TD
+graph TD
    E --> D
    B --> E
    C --> E
@@ -176,7 +176,7 @@ This is a minimal I-Map for P using the given variable order.
 - Reason: G is not adjacent to A in the graph, but G and A are dependent given D, B, and C.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(E, D), (C, E), (B, E), (D, C), (B, A), (G, A)}]
 ```mermaid
-   Graph TD
+graph TD
    E --> D
    B --> E
    C --> E
@@ -194,14 +194,14 @@ To build a minimal I-Map for P using this variable order, we will iteratively ad
 - Reason: A is not adjacent to C in the graph, but A and C are dependent given E and B.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(A, C)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> C
 ```
 - Step 2: Add edge (C, E)
 - Reason: C is not adjacent to E in the graph, but C and E are dependent given A and B.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(A, C), (C, E)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> C
    C --> E
 ```
@@ -209,7 +209,7 @@ To build a minimal I-Map for P using this variable order, we will iteratively ad
 - Reason: C is adjacent to D in the graph, but C and D are dependent given E and B.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(A, C), (C, E), (C, D)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> C
    C --> E
    C --> D
@@ -218,7 +218,7 @@ To build a minimal I-Map for P using this variable order, we will iteratively ad
 - Reason: E is adjacent to D in the graph, but E and D are dependent given B.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(A, C), (C, E), (C, D), (E, D)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> C
    C --> E
    C --> D
@@ -228,7 +228,7 @@ To build a minimal I-Map for P using this variable order, we will iteratively ad
 - Reason: B is adjacent to D in the graph, but B and D are dependent given A.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(A, C), (C, E), (C, D), (E, D), (B, D)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> C
    C --> E
    C --> D
@@ -239,7 +239,7 @@ To build a minimal I-Map for P using this variable order, we will iteratively ad
 - Reason: B is adjacent to E in the graph, but B and E are dependent given A and C.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(A, C), (C, E), (C, D), (E, D), (B, D), (B, E)}]
 ```mermaid
-   Graph TD
+graph TD
    A --> C
    C --> E
    C --> D
@@ -251,7 +251,7 @@ To build a minimal I-Map for P using this variable order, we will iteratively ad
 - Reason: E is adjacent to G in the graph, but E and G are dependent given A, B, and C.
 - Resulting graph: [Nodes={A, B, C, D, E, G}, Edges={(A, C), (C, E), (C, D), (E, D), (B, D), (B, E), (E, G)]}
 ```mermaid
-   Graph TD
+graph TD
    A --> C
    C --> E
    C --> D
