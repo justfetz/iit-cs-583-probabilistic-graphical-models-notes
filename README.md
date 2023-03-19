@@ -9,6 +9,8 @@ This repository contains my notes for a class on Probabilistic Graphical Models.
 - Probability Distributions
 - Bayesian to Markov
 - Markov to Bayesian
+- d-separation and the conditioning set
+- Laws of Probability
 
 The notes include examples and explanations of each topic. 
 
