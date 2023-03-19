@@ -1,4 +1,4 @@
-## d separation
+## d-separation
 
 ```mermaid
    graph TD
