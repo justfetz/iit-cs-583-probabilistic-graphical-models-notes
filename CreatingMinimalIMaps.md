@@ -21,6 +21,8 @@ Variable orders are:
 3. G, E, D, C, B, A 
 4. G, A, C, E, D, B
 
+ #### Response
+ 
 1. Using variable order C, A, B, E, D, G
 
 To build a minimal I-Map for P using this variable order, we will iteratively add edges to the graph based on d-separation tests until we cannot add any more edges. Here are the steps:
