@@ -25,7 +25,7 @@ A path between two variables is considered "blocked" if it satisfies one of the 
 - It contains a node that is not in the conditioning set and has two incoming arrows that are not "observed" or one incoming arrow that is "observed".
 - If a path is blocked, then the variables at the ends of the path are considered conditionally independent given the conditioning set. If a path is not blocked, then the variables at the ends of the path are considered dependent given the conditioning set.
 
-Now, let's work through the statements one by one:
+The statements one by one (class example):
 
 **D is independent of G.**
 
