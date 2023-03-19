@@ -8,6 +8,8 @@
    I --> S
 ```
 
+### Which statement holds?
+
 1. D independent of G
 2. D independent of L
 3. D independent of I
