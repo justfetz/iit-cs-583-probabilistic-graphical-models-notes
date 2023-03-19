@@ -4,13 +4,13 @@
 
 -  Suppose we have a set of random variables X1, X2, ..., Xn. The chain rule of probability states that the joint probability of these variables can be written as a product of conditional probabilities, as follows:
 
--  P(X1, X2, ..., Xn) = P(X1) * P(X2 | X1) * P(X3 | X1, X2) * ... * P(Xn | X1, X2, ..., Xn-1)
+-  ```P(X1, X2, ..., Xn) = P(X1) * P(X2 | X1) * P(X3 | X1, X2) * ... * P(Xn | X1, X2, ..., Xn-1)```
 
 -  This rule tells us that the joint probability of a set of random variables can be decomposed into a product of conditional probabilities, each conditioned on the values of the previous variables in the sequence.
 
 -  For example, suppose we have a coin that can land either heads (H) or tails (T), and we toss the coin twice. We can represent the outcome of each toss by random variables X1 and X2, respectively. The joint probability distribution of X1 and X2 can be calculated using the chain rule of probability as follows:
 
--  P(X1, X2) = P(X1) * P(X2 | X1)
+- ``` P(X1, X2) = P(X1) * P(X2 | X1)```
 
 where:
 
