@@ -1,6 +1,6 @@
 ## Independent Parameters
 
-We are given the random variables X2, X3, …, Xn, and Y2, Y3, …, Ym. Answer the following questions.
+We are given the random variables $$X2, X3, …, Xn, and Y2, Y3, …, Ym$$. Answer the following questions.
 a.	Assuming every variable is binary, how many independent parameters are needed to represent P(X2, X3, …, Xn, Y2, Y3, …, Ym)?
 b.	Assuming every variable has three possible values, how many independent parameters are needed to represent P(X2, X3, …, Xn, Y2, Y3, …, Ym)?
 c.	Assuming each Xi has i possible values and similarly, every Yi has i possible values, how many independent parameters are needed to represent P(X2, X3, …, Xn, Y2, Y3, …, Ym)?
