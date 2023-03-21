@@ -28,23 +28,20 @@
          /     |     \
     Humidity Windy  Play=2
      /   \             \
-    High Normal       Play=1
+   High Normal       Play=1
     /      \
-    Temp     Play=1
-     /  \ 
-    Hot Mild
-     |   |
-     |   | 
-     |  Play=1
-     |
-     |
-     |  
-     |
-    Cool 
-     |
-     |
-     |
-    Play=1
-
-
-
+  Temp     Play=1
+  /  \ 
+ Hot Mild
+  |   |
+  |   | 
+  |  Play=1
+  |
+  |
+  |  
+  |
+ Cool 
+  |
+  |
+  |
+Play=1
