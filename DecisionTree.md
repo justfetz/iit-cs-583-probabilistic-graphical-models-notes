@@ -22,27 +22,29 @@
 
 ### The Tree with Observations
 
-                             Outlook (14)
-                            /  |   \
-                           /   |    \
-                      Sunny  5     Overcast (4)
-                        / \          /  \
-                       /   \        /    \
-              Humidity 2   Windy 3  Yes (4)
-                /   \                /   \
-               /     \              /     \
-            High   Normal          /      \
-                                Humidity 2  Windy
-                                  /  \     /   \
-                                 /    \   /     \
-                                High Normal No (1)
-                                             /   \
-                                            /     \
-                                           /       \
-                                        Windy      Yes (3)
-                                          /   \
-                                         /     \
-                                        /       \
-                                       FALSE    TRUE (2)
+              Outlook
+             / |   \
+        Sunny Rainy Overcast
+         /     |     \
+    Humidity Windy  Play=2
+     /   \             \
+   High Normal       Play=1
+    /      \
+  Temp     Play=1
+  /  \ 
+ Hot Mild
+  |   |
+  |   | 
+  |  Play=1
+  |
+  |
+  |  
+  |
+ Cool 
+  |
+  |
+  |
+Play=1
+
 
 
