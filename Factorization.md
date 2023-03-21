@@ -19,13 +19,13 @@ graph TD
 
 ### The Joint Distribution as a Factorization Over a Bayesian Network
 
-$$P(A,B,C,D,E,J,G,H) = P(A|C) * P(B|C) * P(C|D) * P(J|C) * P(E|G) * P(D|C,G) * P(G|J) * P(H|J,G)$$
+$$P(A,B,C,D,E,J,G,H) = P(A) * P(B) * P(C | A,B) * P(D | C) * P(E) * P(J | C) * P(G | E,D,J) * P(H | G)$$
 
 ### Independent Parameters
 
 - Assuming each variable is discrete and can take n possible values, the number of independent parameters needed for this Bayesian network is:
 
-$$n(A|C) * n(B|C) * n(C|D) * n(J|C) * n(E|G) * n(D|C,G) * n(G|J) * n(H|J,G)$$
+$$nP(C | A,B) * nP(D | C) * n(D|C) * n(J|C) * n(E|G) * n(D|C,G) * P(G | E,D,J)* n(P(H | G)$$
 
 ### Independence Statements
 
