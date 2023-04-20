@@ -1,5 +1,7 @@
 ## Probabilistic Graphical Models Notes
 
+`$p(X=1|D) = \frac{\Gamma(2+3)}{\Gamma(2)\Gamma(3)} \left(\frac{1}{3}\right)^2 \left(\frac{2}{3}\right)^1 = 0.5319148936170212$`
+
 This repository contains my notes for a class on Probabilistic Graphical Models. The notes cover the following topics:
 
 - Formulas
