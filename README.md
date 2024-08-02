@@ -1,11 +1,13 @@
-## Probabilistic Graphical Models Notes
+## Illinois Institute of Technology Probabilistic Graphical Models CS - 583 Notes
 ```math
 p(X=1|D) = \frac{\Gamma(2+3)}{\Gamma(2)\Gamma(3)} \left(\frac{1}{3}\right)^2 \left(\frac{2}{3}\right)^1 = 0.5319148936170212
 ```
 
 `$p(X=1|D) = \frac{\Gamma(2+3)}{\Gamma(2)\Gamma(3)} \left(\frac{1}{3}\right)^2 \left(\frac{2}{3}\right)^1 = 0.5319148936170212$`
 
-This repository contains my notes for a class on Probabilistic Graphical Models. The notes cover the following topics:
+This repository contains ai generated notes in 2023 for a class on Probabilistic Graphical Models. 
+The notes cover the following topics:
+Note: This was used to see how helpful/useful this would be and not all information posted here is 100% correct.  This is mostly ChatGPT in 2023 summarizing this content from the course.
 
 - Formulas
 - I Maps
@@ -57,5 +59,5 @@ B-->AB
 B-->BC
 C-->BC
 ```
-## iit-pgm repository
+## iit-pgm 583 repository 2023
 
