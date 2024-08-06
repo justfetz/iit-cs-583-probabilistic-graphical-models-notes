@@ -1,4 +1,6 @@
-## Probabilistic Graphical Models Notes
+Illinois Institute of Technology CS-535 Advanced Algorithms Notes
+
+## CS - 583 Probabilistic Graphical Models Notes
 ```math
 p(X=1|D) = \frac{\Gamma(2+3)}{\Gamma(2)\Gamma(3)} \left(\frac{1}{3}\right)^2 \left(\frac{2}{3}\right)^1 = 0.5319148936170212
 ```
